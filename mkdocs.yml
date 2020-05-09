@@ -1,8 +1,16 @@
 site_name: Meow
 theme: readthedocs
 
+site_url: https://bigballon.github.io/Meow/
+
 markdown_extensions:
   - pymdownx.arithmatex
 
 extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+extra:
+  disqus: BIGBALLON
+  google_analytics:
+    - UA-126395678-1
+    - auto
