@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://bigballon.github.io/Meow/linux_basic/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Linux Basic - Meow</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Linux Basic";
+    var mkdocs_page_input_path = "linux_basic.md";
+    var mkdocs_page_url = "/Meow/linux_basic/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Meow</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">BG's Cheat Sheets</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../bash/">Bash Basic</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dl_tools/">Deep Learning Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">Git Basic</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Linux Basic</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#quick-search">Quick Search</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_tools/">Linux Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../todo/">To Do List</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Meow</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Linux Basic</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="linux-basic">Linux Basic</h1>
+<ul>
+<li>Reference: <a href="https://linuxtools-rst.readthedocs.io/zh_CN/latest/">linuxtools</a></li>
+</ul>
+<h2 id="quick-search">Quick Search</h2>
+<ul>
+<li>uname - print system information</li>
+<li>lshw - list hardware</li>
+<li>lscpu - display information about the CPU architecture</li>
+<li>fdisk - manipulate disk partition table</li>
+<li>df - report file system disk space usage</li>
+<li>free - display amount of free and used memory in the system</li>
+<li>bg, fg, &amp; and Ctrl+Z</li>
+<li>ps - report a snapshot of the current processes</li>
+<li>grep, egrep, fgrep, rgrep - print lines matching a pattern</li>
+<li>diff - compare files line by line</li>
+<li>find - search for files in a directory hierarchy</li>
+<li>echo - display a line of text</li>
+<li>history - GNU History Library</li>
+<li>kill - send a signal to a process</li>
+<li>groups - print the groups a user is in</li>
+<li>chmod - change file mode bits</li>
+<li>chgrp - change group ownership</li>
+<li>chown - change file owner and group</li>
+<li>curl - transfer a URL</li>
+<li>wget - The non-interactive network downloader</li>
+<li>top - display Linux processes</li>
+<li>nl - Number lines of files</li>
+<li>cat - concatenate files and print on the standard output</li>
+<li>less - opposite of more</li>
+<li>wc - print newline, word, and byte counts for each file</li>
+<li>mv - move (rename) files</li>
+<li>cp - copy files and directories</li>
+<li>pwd - print name of current/working directory</li>
+<li>mkdir - make directories </li>
+<li>passwd - change user password</li>
+<li>ping - send ICMP ECHO_REQUEST to network hosts</li>
+<li>head - output the first part of files</li>
+<li>tail - output the last part of files</li>
+<li>uptime - Tell how long the system has been running.</li>
+<li>date - Print or set the system date and time.</li>
+<li>whoami - Print effective userid.</li>
+<li>shutdown - Halt, power-off or reboot the machine</li>
+<li>w - show who is logged on and what they are doing</li>
+<li>ssh — OpenSSH SSH client (remote login program)</li>
+<li>cal, ncal — displays a calendar and the date of Easter</li>
+<li>ctrl + a or home: Go to the beginning of the line.</li>
+<li>ctrl + e or End: Go to the end of the line.</li>
+<li>nvidia-smi: NVIDIA System Management Interface program</li>
+<li>ctrl + xx: Move between the beginning of the line and the current position of the cursor. This allows you to press Ctrl+XX to return to the start of the line, change something, and then press Ctrl+XX to go back to your original cursor position.</li>
+<li>ctrl + c: Interrupt (kill) the current foreground process running in in the terminal.</li>
+<li>ctrl + d: Close the bash shell.</li>
+<li>ctrl + z: Suspend the current foreground process running in bash.</li>
+<li>ctrl + l: Clear the screen. This is similar to running the “clear” command.</li>
+<li>ctrl + s: Stop all output to the screen.</li>
+<li>ctrl + q: Resume output to the screen after stopping it with ctrl + s.</li>
+<li>ctrl + w: Cut the word before the cursor, adding it to the clipboard.</li>
+<li>ctrl + k: Cut the part of the line after the cursor, adding it to the clipboard.</li>
+<li>ctrl + u: Cut the part of the line before the cursor, adding it to the clipboard.</li>
+<li>ctrl + y: Paste the last thing you cut from the clipboard. The y here stands for “yank”.</li>
+<li>alt + u: Capitalize every character from the cursor to the end of the current word, converting the characters to upper case.</li>
+<li>alt + l: Uncapitalize every character from the cursor to the end of the current word, converting the characters to lower case.</li>
+<li>alt + c: Capitalize the character under the cursor. Your cursor will move to the end of the current word.</li>
+<li>alt + r: Revert any changes to a command you’ve pulled from your history if you’ve edited it.</li>
+<li>ctrl + r: Recall the last command matching the characters you provide. Press this shortcut and start typing to search your bash history for a command.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../linux_tools/" class="btn btn-neutral float-right" title="Linux Tools">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../git/" class="btn btn-neutral" title="Git Basic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../git/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../linux_tools/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

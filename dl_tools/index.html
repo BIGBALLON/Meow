@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://bigballon.github.io/Meow/dl_tools/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Deep Learning Tools - Meow</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Deep Learning Tools";
+    var mkdocs_page_input_path = "dl_tools.md";
+    var mkdocs_page_url = "/Meow/dl_tools/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Meow</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">BG's Cheat Sheets</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../bash/">Bash Basic</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Deep Learning Tools</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#cuda-installation">CUDA Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#cudnn-installation">cuDNN Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-cuda-version">Check CUDA version</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#check-cudnn-version">Check cuDNN version</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visit-tensorboard-via-ssh">Visit Tensorboard via SSH</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">Git Basic</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_basic/">Linux Basic</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_tools/">Linux Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../todo/">To Do List</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Meow</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Deep Learning Tools</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="deep-learning-tools">Deep Learning Tools</h1>
+<h2 id="cuda-installation">CUDA Installation</h2>
+<ul>
+<li>Official doc: <ul>
+<li><a href="https://docs.nvidia.com/cuda/index.html">nvidia-cuda</a></li>
+</ul>
+</li>
+<li>Previous note:<ul>
+<li><a href="https://github.com/BIGBALLON/cifar-10-cnn/blob/master/doc/PyTorch-install.md">PyTorch-install.md</a></li>
+</ul>
+</li>
+</ul>
+<p>PS: To install the Display Driver, the Nouveau drivers must first be disabled. Each distribution of Linux has a different method for disabling Nouveau. The Nouveau drivers are loaded if the following command prints anything: <code>lsmod | grep nouveau</code></p>
+<h2 id="cudnn-installation">cuDNN Installation</h2>
+<ul>
+<li>Official doc: <ul>
+<li><a href="https://docs.nvidia.com/deeplearning/sdk/cudnn-install/index.html">nvidia-deeplearning</a></li>
+</ul>
+</li>
+<li>Previous note:<ul>
+<li><a href="https://github.com/BIGBALLON/cifar-10-cnn/blob/master/doc/PyTorch-install.md">PyTorch-install.md</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="bash"># 1. Navigate to your &lt;cudnnpath&gt; directory containing the cuDNN Tar file.
+# 2. Unzip the cuDNN package.
+tar -xzvf cudnn-x.x-linux-x64-v8.x.x.x.tgz
+# 3. Copy the following files into the CUDA Toolkit directory, and change the file permissions.
+sudo cp cuda/include/cudnn.h /usr/local/cuda/include
+sudo cp cuda/include/cudnn_version.h /usr/local/cuda/include
+sudo cp cuda/lib64/libcudnn* /usr/local/cuda/lib64
+sudo chmod a+r /usr/local/cuda/include/cudnn.h /usr/local/cuda/lib64/libcudnn*
+</code></pre>
+
+<h2 id="check-cuda-version">Check CUDA version</h2>
+<pre><code class="bash">cat /usr/local/cuda/version.txt
+
+# CUDA Version 10.2.89
+
+nvcc--version 
+
+# nvcc: NVIDIA (R) Cuda compiler driver
+# Copyright (c) 2005-2019 NVIDIA Corporation
+# Built on Wed_Oct_23_19:24:38_PDT_2019
+# Cuda compilation tools, release 10.2, V10.2.89
+</code></pre>
+
+<h2 id="check-cudnn-version">Check cuDNN version</h2>
+<pre><code class="bash">cat /usr/local/cuda/include/cudnn.h | grep CUDNN_MAJOR -A 2 
+
+#define CUDNN_MAJOR 7
+#define CUDNN_MINOR 6
+#define CUDNN_PATCHLEVEL 5
+--
+#define CUDNN_VERSION (CUDNN_MAJOR * 1000 + CUDNN_MINOR * 100 + CUDNN_PATCHLEVEL)
+
+#include &quot;driver_types.h&quot;
+</code></pre>
+
+<h2 id="visit-tensorboard-via-ssh">Visit Tensorboard via SSH</h2>
+<pre><code>ssh -L 12306:127.0.0.1:12306 account@server.address
+
+# see https://zhuanlan.zhihu.com/p/57630633
+# and https://stackoverflow.com/questions/38513333/is-it-possible-to-see-tensorboard-over-ssh
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../git/" class="btn btn-neutral float-right" title="Git Basic">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../bash/" class="btn btn-neutral" title="Bash Basic"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../bash/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../git/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
