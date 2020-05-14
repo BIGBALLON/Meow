@@ -51,3 +51,87 @@ cp .tmux/.tmux.conf.local .
 git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 ```
+
+## Nvidia-driver Installation
+
+- dowload script [here](./files/nvidia-driver.sh)
+
+```bash
+#!/bin/bash
+
+set -e
+
+DRIVER_VERSION=$1
+curl -O -L "http://us.download.nvidia.com/XFree86/Linux-x86_64/${DRIVER_VERSION}/NVIDIA-Linux-x86_64-${DRIVER_VERSION}.run"
+sudo bash "NVIDIA-Linux-x86_64-${DRIVER_VERSION}.run"
+
+# e.g., 440.82 440.64
+# For Tasla: http://us.download.nvidia.com/tesla/410.129/NVIDIA-Linux-x86_64-410.129-diagnostic.run
+# For GeForce: http://us.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
+```
+
+
+## Docker Installation
+
+- dowload script [here](./files/docker.sh)
+
+
+```bash
+#!/bin/bash
+
+# uninstall old versions
+sudo apt-get remove docker docker-engine docker.io containerd runc
+
+# update the apt package index and install packages
+sudo apt-get update
+sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+ 
+# add Docker’s official GPG key
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+# set up the stable repository
+sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+
+# install docker engine
+sudo apt-get update
+sudo apt-get install docker-ce docker-ce-cli containerd.io
+ 
+# change docker source [optional]
+# try to use aliyun https://xxxxxx.mirror.aliyuncs.com
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": [
+      "https://registry.docker-cn.com",
+      "https://docker.mirrors.ustc.edu.cn"
+  ]
+}
+EOF
+sudo service docker restart
+
+# verify that Docker Engine is installed correctly
+sudo docker run hello-world
+```
+
+## Nvidia-docker Installation
+
+- dowload script [here](./files/nvidia-docker.sh)
+
+```bash
+#!/bin/bash
+
+# Add the package repositories
+distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
+curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
+curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
+ 
+sudo apt-get update && sudo apt-get install -y nvidia-container-toolkit
+sudo systemctl restart docker
+```
