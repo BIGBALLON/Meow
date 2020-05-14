@@ -26,14 +26,15 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
  
 # change docker source [optional]
-echo -e '{' > /etc/docker/daemon.json
-echo -e '    "registry-mirrors": [' >> /etc/docker/daemon.json
-echo -e '        "https://registry.docker-cn.com",' >> /etc/docker/daemon.json
-echo -e '        "http://hub-mirror.c.163.com"' >> /etc/docker/daemon.json
-echo -e '    ],' >> /etc/docker/daemon.json
-echo -e '    "dns": ["8.8.8.8","8.8.4.4"]' >> /etc/docker/daemon.json
-echo -e '}' >> /etc/docker/daemon.json
-service docker restart
- 
+sudo tee /etc/docker/daemon.json <<-'EOF'
+{
+  "registry-mirrors": [
+      "https://registry.docker-cn.com",
+      "https://docker.mirrors.ustc.edu.cn"
+  ]
+}
+EOF
+sudo service docker restart
+
 # verify that Docker Engine is installed correctly
 sudo docker run hello-world
