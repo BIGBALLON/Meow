@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="../css/theme.css" />
   <link rel="stylesheet" href="../css/theme_extra.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../extra.css" rel="stylesheet" />
   
   <script>
     // Current page data
@@ -26,6 +27,8 @@
   <script src="../js/jquery-2.1.1.min.js" defer></script>
   <script src="../js/modernizr-2.8.3.min.js" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script> 
   
 </head>
@@ -48,19 +51,11 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
                 <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="..">BG's Cheat Sheets</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../bash/">Bash Basic</a>
+                    <li class="toctree-l1"><a class="reference internal" href="..">BG's Notebook</a>
                     </li>
                 </ul>
                 <ul>
                     <li class="toctree-l1"><a class="reference internal" href="../dl_tools/">Deep Learning Tools</a>
-                    </li>
-                </ul>
-                <ul>
-                    <li class="toctree-l1"><a class="reference internal" href="../git/">Git Basic</a>
                     </li>
                 </ul>
                 <ul>
@@ -124,7 +119,7 @@
 <li>Reference: <a href="https://github.com/BIGBALLON/ubuntu_rc">ubuntu_rc</a></li>
 </ul>
 <h2 id="miniconda-installation">Miniconda Installation</h2>
-<pre><code class="bash">cd ~/Downloads
+<pre><code class="language-bash">cd ~/Downloads
 
 # install latest miniconda
 # see https://docs.conda.io/en/latest/miniconda.html
@@ -133,9 +128,8 @@ bash miniconda.sh -b -p $HOME/miniconda
 eval &quot;$(~/miniconda/bin/conda shell.bash hook)&quot; 
 conda init
 </code></pre>
-
 <h2 id="zsh-installation">Zsh Installation</h2>
-<pre><code class="bash"># install zsh
+<pre><code class="language-bash"># install zsh
 # see http://www.zsh.org/
 sudo apt install zsh -y
 # install oh-my-zsh
@@ -148,9 +142,8 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 sed -i 's/(git)/(git extract z zsh-syntax-highlighting zsh-autosuggestions)/' ~/.zshrc
 </code></pre>
-
 <h2 id="tmux-installation">tmux Installation</h2>
-<pre><code class="bash"># install tmux
+<pre><code class="language-bash"># install tmux
 sudo apt install zsh -y
 # install oh-my-tmux
 cd ~
@@ -158,17 +151,15 @@ git clone https://github.com/gpakosz/.tmux.git
 ln -s -f .tmux/.tmux.conf
 cp .tmux/.tmux.conf.local .
 </code></pre>
-
 <h2 id="vimrc-installation">vimrc Installation</h2>
-<pre><code class="bash">git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
+<pre><code class="language-bash">git clone --depth=1 https://github.com/amix/vimrc.git ~/.vim_runtime
 sh ~/.vim_runtime/install_awesome_vimrc.sh
 </code></pre>
-
 <h2 id="nvidia-driver-installation">Nvidia-driver Installation</h2>
 <ul>
 <li>dowload script <a href="../files/nvidia-driver.sh">here</a></li>
 </ul>
-<pre><code class="bash">#!/bin/bash
+<pre><code class="language-bash">#!/bin/bash
 
 set -e
 
@@ -180,12 +171,11 @@ sudo bash &quot;NVIDIA-Linux-x86_64-${DRIVER_VERSION}.run&quot;
 # For Tasla: http://us.download.nvidia.com/tesla/410.129/NVIDIA-Linux-x86_64-410.129-diagnostic.run
 # For GeForce: http://us.download.nvidia.com/XFree86/Linux-x86_64/440.82/NVIDIA-Linux-x86_64-440.82.run
 </code></pre>
-
 <h2 id="docker-installation">Docker Installation</h2>
 <ul>
 <li>dowload script <a href="../files/docker.sh">here</a></li>
 </ul>
-<pre><code class="bash">#!/bin/bash
+<pre><code class="language-bash">#!/bin/bash
 
 # uninstall old versions
 sudo apt-get remove docker docker-engine docker.io containerd runc
@@ -227,12 +217,11 @@ sudo service docker restart
 # verify that Docker Engine is installed correctly
 sudo docker run hello-world
 </code></pre>
-
 <h2 id="nvidia-docker-installation">Nvidia-docker Installation</h2>
 <ul>
 <li>dowload script <a href="../files/nvidia-docker.sh">here</a></li>
 </ul>
-<pre><code class="bash">#!/bin/bash
+<pre><code class="language-bash">#!/bin/bash
 
 # Add the package repositories
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
