@@ -1,13 +1,21 @@
 site_name: Meow
-theme: readthedocs
+theme: 
+  name: readthedocs
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
 
 site_url: https://bigballon.github.io/Meow/
 
-markdown_extensions:
-  - pymdownx.arithmatex
 
 extra_javascript:
   - https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+extra_css: 
+  - extra.css
+
+markdown_extensions:
+  - pymdownx.arithmatex
 
 extra:
   disqus: BIGBALLON
