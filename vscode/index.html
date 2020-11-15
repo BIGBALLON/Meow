@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://bigballon.github.io/Meow/vscode/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>VS Code Customization - Meow</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  <link href="../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "VS Code Customization";
+    var mkdocs_page_input_path = "vscode.md";
+    var mkdocs_page_url = "/Meow/vscode/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/rust.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Meow</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">BG's Notebook</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../dl_tools/">Deep Learning Tools</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_basic/">Linux Basic</a>
+                    </li>
+                </ul>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../linux_tools/">Linux Tools</a>
+                    </li>
+                </ul>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">VS Code Customization</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#basic-settings">Basic Settings</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#extensions">Extensions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#settings">Settings</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#color-theme-file-icon">Color Theme &amp; File Icon</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#editor">Editor</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#python-linting-formatting">Python Linting &amp; Formatting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#c-linting-formatting">C++ Linting &amp; Formatting</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#debuging">Debuging</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#remote-ssh">Remote-SSH</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#ssh-key">SSH Key</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#more-powerfule-features">More Powerfule Features</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Meow</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>VS Code Customization</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="vs-code-customization">VS Code Customization</h1>
+<p>此文用于记(分)录(享)我的VS Code环境配置(只涉及通用化配置，不包含诸如自定义代码段等定制化配置)，主要用于算法/深度学习的日常开发，涉及语言为Python和C++，操作系统为Linux(偶尔用MAC OSX，极少用Windows)，开发机器以远程服务器为主, 本地环境为辅。</p>
+<blockquote>
+<p>PS: 这并不是一篇教你如何炫(zhuang)技(B)的文章，使用和配置IDE的前提是你<strong>真正需要它</strong> (适合自己的才是最好的，其实你是VIM党，也可以直接无视本文)，虽说 "工欲善其事必先利其器" ，但我还是建议多将时间花在钻研技术或科研上。</p>
+</blockquote>
+<ul>
+<li><a href="#vs-code-customization">VS Code Customization</a><ul>
+<li><a href="#basic-settings">Basic Settings</a><ul>
+<li><a href="#extensions">Extensions</a></li>
+<li><a href="#settings">Settings</a><ul>
+<li><a href="#color-theme--file-icon">Color Theme &amp; File Icon</a></li>
+<li><a href="#editor">Editor</a></li>
+<li><a href="#python-linting--formatting">Python Linting &amp; Formatting</a></li>
+<li><a href="#c-linting--formatting">C++ Linting &amp; Formatting</a></li>
+<li><a href="#debuging">Debuging</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#remote-ssh">Remote-SSH</a><ul>
+<li><a href="#ssh-key">SSH Key</a></li>
+<li><a href="#more-powerfule-features">More Powerfule Features</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="basic-settings">Basic Settings</h2>
+<p>首先是比较基础的配置，包括<strong>插件</strong>以及一些<strong>settings配置</strong>(主要从硕士期间的编码习惯以及在公司实习期间的开发状况演变而来)，此套配置方案比较适合从事深度学习/算法研究，使用Python和C++作为主要开发语言的童鞋。</p>
+<h3 id="extensions">Extensions</h3>
+<p>先罗列一下插件(<strong>extensions</strong>)：</p>
+<ul>
+<li><strong>Python</strong>[<a href="https://github.com/Microsoft/vscode-python">ms-python.python</a>]</li>
+<li><strong>C/C++</strong>[<a href="https://github.com/microsoft/vscode-cpptools">ms-vscode.cpptools</a>]</li>
+<li><strong>C/C++ Clang Command Adapter</strong> [<a href="https://github.com/mitaki28/vscode-clang">mitaki28.vscode-clang</a>]</li>
+<li><strong>Markdown All in One</strong>[<a href="https://github.com/yzhang-gh/vscode-markdown">yzhang.markdown-all-in-one</a>]</li>
+<li><strong>GitLens</strong>[<a href="https://github.com/eamodio/vscode-gitlens">eamodio.gitlens</a>]</li>
+<li><strong>Remote-SSH</strong>[<a href="https://github.com/microsoft/vscode-remote-release">ms-vscode-remote.remote-ssh</a>]</li>
+<li><strong>Settings Sync</strong>[<a href="https://github.com/shanalikhan/code-settings-sync">shan.code-settings-sync</a>]</li>
+<li><strong>Dracula Official</strong>[<a href="https://github.com/dracula/visual-studio-code">dracula-theme.theme-dracula</a>]</li>
+<li><strong>vscode-icons</strong>[<a href="https://github.com/vscode-icons/vscode-icons">vscode-icons-team.vscode-icons</a>]</li>
+</ul>
+<p><img alt="" src="https://gitee.com/bigballon/images/raw/master/img/K5lRd1S.png" /></p>
+<p>稍微解释一下各个插件的功能与用途：</p>
+<ul>
+<li>首先，代码高亮和语法检查是日常开发必须的, 这里我直接选用微软官方的 <strong>Python</strong> 和 <strong>C/C++</strong> 这两个插件, 针对 C/C++ 的语法检查与代码补全，我选用的是 <strong>C/C++ Clang Command Adapter</strong>，后边还会提到。   </li>
+<li>因为个人还经常使用markdown，这里再加一款优秀的Markdown插件 <strong>Markdown All in One</strong>，满足日常开发需求。</li>
+<li><strong>GitLens</strong> 则是代码版本管理与合作开发方面的不二选择。</li>
+<li><strong>Remote-SSH</strong> 则可以说是VS Code最大的神器之一，让远程编写/调式代码变得异常舒适。</li>
+<li>主题方面因为对粉红色和紫色比较钟爱，所以选择了<strong>Dracula</strong>，图标则是 <strong>vscode-icons</strong>。</li>
+</ul>
+<p>前面说了这些是我认为比较通用的插件，其他较为定制化的插件的使用，因人而异，请自行安装与配置。</p>
+<h3 id="settings">Settings</h3>
+<p>再来看一下配置文件(<strong>settings.json</strong>):</p>
+<pre><code class="language-json">{
+    // theme
+    &quot;workbench.colorTheme&quot;: &quot;Dracula Soft&quot;,
+    &quot;workbench.iconTheme&quot;: &quot;vscode-icons&quot;,
+    // editor settings
+    &quot;editor.renderIndentGuides&quot;: true,
+    &quot;editor.formatOnSave&quot;: true,
+    &quot;editor.insertSpaces&quot;: true,
+    &quot;editor.mouseWheelZoom&quot;: true,
+    &quot;editor.renderControlCharacters&quot;: true,
+    &quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+    &quot;files.eol&quot;: &quot;\n&quot;,
+    // python settings
+    &quot;python.formatting.provider&quot;: &quot;black&quot;,
+    &quot;[python]&quot;: {
+        &quot;editor.codeActionsOnSave&quot;: {
+            &quot;source.organizeImports&quot;: true
+        },
+        &quot;editor.tabSize&quot;: 4
+    },
+    // c plus plus settings
+    &quot;C_Cpp.clang_format_fallbackStyle&quot;: &quot;Google&quot;,
+    &quot;[cpp]&quot;: {
+        &quot;editor.detectIndentation&quot;: true,
+        &quot;editor.tabSize&quot;: 2
+    }
+}
+</code></pre>
+<p>同样，稍微解释一下：</p>
+<h4 id="color-theme-file-icon">Color Theme &amp; File Icon</h4>
+<pre><code class="language-json">// 颜色主题 Dracula Soft
+// 图标主题 vscode-icons
+&quot;workbench.colorTheme&quot;: &quot;Dracula Soft&quot;,
+&quot;workbench.iconTheme&quot;: &quot;vscode-icons&quot;,
+</code></pre>
+<p><img alt="" src="https://gitee.com/bigballon/images/raw/master/img/7u7kh6u.png" /></p>
+<h4 id="editor">Editor</h4>
+<pre><code class="language-json">// 显示缩进参考线，很有用，特别是在嵌套很多层的时候
+&quot;editor.renderIndentGuides&quot;: true, 
+
+// 在保存时对代码进行格式化，非常有用
+&quot;editor.formatOnSave&quot;: true,
+
+// 当按tab键是，用空格代替
+// PS: 开启这个可以充分避免因为tab键和space键混用而导致的代码一团糟
+// 特别是在编写python代码的时候 XD
+&quot;editor.insertSpaces&quot;: true,
+
+// 按住 Ctrl 键并滚动鼠标滚轮时对编辑器字体大小进行缩放
+// 如在meeting适，share屏幕下VS Code字体太小，就能进行调节
+&quot;editor.mouseWheelZoom&quot;: true,
+
+// 显示控制字符
+// 这个也非常有用，有时候一些看不到的特殊字符可能会让你debug半天
+&quot;editor.renderControlCharacters&quot;: true,
+
+// 显示空白字符
+// 我使用的是 boundary 模式，这样可以比较清晰地看到每行开头和结尾的空格字符
+&quot;editor.renderWhitespace&quot;: &quot;boundary&quot;,
+
+// 文件的EOL，统一成 &quot;\n&quot;， 
+// see https://stackoverflow.com/questions/1552749/difference-between-cr-lf-lf-and-cr-line-break-types
+// 避免不同平台之间出现诸如&quot;^M&quot;等问题
+&quot;files.eol&quot;: &quot;\n&quot;,
+</code></pre>
+<p>PS：友情提示，你可以在json文件中手动添加或者修改，也可以通过图形界面进行选择与修改, 下面放一张效果图(可以仔细观察一下右上和右下两张图的区别)</p>
+<p><img alt="" src="https://gitee.com/bigballon/images/raw/master/img/oDWzywp.png" /></p>
+<h4 id="python-linting-formatting">Python Linting &amp; Formatting</h4>
+<p>Python的代码检查与格式化，我使用了 <strong>isort</strong> + <strong>black</strong> + <strong>flake8</strong> 的方案，类似的方案也可以在众多开源项目中看到，如 <a href="https://github.com/facebookresearch">FAIR</a> 的图像分类训练框架 <a href="https://github.com/facebookresearch/pycls/blob/master/dev/linter.sh">pycls</a>, 通用检测训练框架 <a href="https://github.com/facebookresearch/detectron2/blob/master/dev/linter.sh">Detectron2</a> 等等。</p>
+<ul>
+<li><a href="https://github.com/PyCQA/isort">isort</a> 是一个专门用来对imports进行排序的工具<ul>
+<li>你可能经常会有到底import的这些package怎么摆放，isort帮你统一解决了这个问题</li>
+<li>官宣很有意思: isort your imports, so you don't have to.</li>
+</ul>
+</li>
+<li><a href="https://github.com/psf/black">black</a> 代替默认的pylint对代码进行格式化<ul>
+<li>官方的说法是 Black is the uncompromising Python code formatter</li>
+</ul>
+</li>
+<li><a href="https://github.com/PyCQA/flake8">flake8</a> 是目前比较常用的静态代码检查工具<ul>
+<li>我个人认为团队统一的代码风格和开发规范是很重要的</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-json">// provider 选择black
+&quot;python.formatting.provider&quot;: &quot;black&quot;,
+&quot;[python]&quot;: {
+    // 在保存 python 文件的时候，用isort进行import 排序
+    &quot;editor.codeActionsOnSave&quot;: {
+        &quot;source.organizeImports&quot;: true
+    },
+    // tab键占用4个字符
+    &quot;editor.tabSize&quot;: 4
+}
+</code></pre>
+<p>可以优先在自己使用conda环境中装好(忘记装也不要紧，Lint或者Format的时候VS Code会提示你):</p>
+<pre><code class="language-bash">conda install black flake8 isort -y
+</code></pre>
+<p>全部配置好后会产生如下效果:</p>
+<ul>
+<li><code>ctrl + s</code> 进行文件保存<ul>
+<li>调用isort对imports进行排序</li>
+<li>调用black进行代码格式化</li>
+</ul>
+</li>
+<li>保存结束</li>
+</ul>
+<p>不管是团队还是个人，统一的 Linting 和 Formatting 都是重要的，我们应该把精力花在coding本身，而不应该在代码风格和排版上纠结</p>
+<h4 id="c-linting-formatting">C++ Linting &amp; Formatting</h4>
+<p>C++ 这里，我简单配置了 <a href="https://google.github.io/styleguide/cppguide.html">Google Style</a>，从下面的配置也能看清晰看出</p>
+<pre><code class="language-json">&quot;C_Cpp.clang_format_fallbackStyle&quot;: &quot;Google&quot;,
+&quot;[cpp]&quot;: {
+    &quot;editor.detectIndentation&quot;: true,
+    &quot;editor.tabSize&quot;: 2
+}
+</code></pre>
+<ul>
+<li>大部分情况下还是推荐用 <a href="http://clang.llvm.org/docs/ClangFormat.html">Clang-Format</a> 来做 C++ 代码风格管理，大家熟悉的 <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/.clang-format">TensorFlow</a> / <a href="https://github.com/pytorch/pytorch/blob/master/.clang-format">PyTorch</a> / <a href="https://github.com/electron/electron/blob/master/.clang-format">Electron</a> 等开源 C++ 项目均有使用</li>
+<li>如果是做一些ICPC的比赛，更推荐直接使用 <a href="https://www.vim.org/">Vim</a> / <a href="http://www.codeblocks.org/">Code::Blocks</a>，或者更轻量级的 <a href="https://www.sublimetext.com/">Sublime Text</a></li>
+</ul>
+<p><img alt="image alt" src="https://user-images.githubusercontent.com/7837172/98710010-18b1dc80-23be-11eb-819b-5e7ac904cff1.gif" /></p>
+<h4 id="debuging">Debuging</h4>
+<p>代码调试这块可能并不是VS Code的强项，对于一些小的项目或者比较单一的代码段，使用默认的调试工具进行简单调试即可，某些比较大型的项目，建议还是在terminal用GDB仔细调试。</p>
+<p><img alt="debug" src="https://user-images.githubusercontent.com/7837172/99184742-18c82880-2780-11eb-9e9c-54c8c98c8bc9.gif" /></p>
+<h2 id="remote-ssh">Remote-SSH</h2>
+<p>相对于本地调试，更多时候我们可能需要在远程服务器上进行实验与开发工作，这个时候 Remote-SSH 这个神器就体现出它的优越性了</p>
+<h3 id="ssh-key">SSH Key</h3>
+<p>SSH的连接，主要有如下三种情况：</p>
+<ul>
+<li><strong>SSH直连</strong>: 比较懒惰的做法就是ssh直连到实验室的服务器上，这样每次输入账号密码就行了</li>
+<li><strong>免密登录</strong>: 稍微舒服一点的做法是配置一下 ssh key ，做到免密登录<ul>
+<li><a href="https://docs.github.com/en/free-pro-team@latest/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent">generate a new ssh-key</a></li>
+</ul>
+</li>
+<li><strong>Jump跳板机</strong>: 通过配置 <code>ProxyCommand</code> 或者 <code>ProxyJump</code> ，实现跳过堡垒机/跳板机, 关于如何配置 ProxyCommand/ProxyJump，推荐两篇文章给大家，分别对应Windows和Linux，这里我就不展开了<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/103578899">VSCode Remote ssh跳板机配置(windows)</a> <ul>
+<li>虽然我不推荐使用windows作为日常开发的系统</li>
+</ul>
+</li>
+<li><a href="https://zhuanlan.zhihu.com/p/74193910">SSH 通过跳板机直接访问内网机器(Linux/Mac OSX)</a></li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-bash"># 直连，设置HostName 和 User 即可
+Host v100-dota2
+    HostName v100.dota2-ai.com
+    User bigballon
+
+# 再加上 IdentityFile 即可实现免密登录
+Host 3090-dota2
+    HostName rtx3090.dota2-ai.com
+    User bigballon
+    IdentityFile ~/.ssh/id_ed25519_RTX3090
+
+# 再配置 ProxyJump 实现Jump跳板机
+Host dota2-ai-lab
+    HostName lab.dota2-ai.com
+    User bg
+    IdentityFile ~/.ssh/id_ed25519_dota2
+    ProxyJump bg@jump.dota2-ai.com
+    # ProxyJump 或 ProxyCommand 都可以
+    # 使用 ProxyJump 需要 OpenSSH &gt; 7.3 才可以使用
+
+</code></pre>
+<p><img alt="ssh-key" src="https://gitee.com/bigballon/images/raw/master/img/SS.jpg" /></p>
+<h3 id="more-powerfule-features">More Powerfule Features</h3>
+<p>Remote-SSH的功能 远不止 通过SSH方式连接远程服务器 这么简单:</p>
+<ul>
+<li>在remote端安装对应的extension</li>
+<li>选择remote端的interpreter</li>
+<li>与remote连接上的terminal，</li>
+</ul>
+<p>可以到达与本地几乎完全相同的使用体验，甚至可以直接右键单击文件或文件夹进行下载, 将文件或文件夹拖拽进VS Code进行上传，这样你无需再开启filezilla之类的传输工具，
+而VS Code自带的终端，也同步连接至远程服务器，而且支持多开，分屏等功能，几乎所有的操作都可以在VS Code中完成</p>
+<p><img alt="rsh" src="https://gitee.com/bigballon/images/raw/master/img/Snipaste_rsh.jpg" /></p>
+<p><img alt="extension1" src="https://gitee.com/bigballon/images/raw/master/img/Snipaste_is1.jpg" /></p>
+<p><img alt="extension2" src="https://gitee.com/bigballon/images/raw/master/img/Snipaste_is2.jpg" /></p>
+<p><img alt="interpreter" src="https://gitee.com/bigballon/images/raw/master/img/Snipaste_hj.jpg" /></p>
+<p><img alt="overview" src="https://gitee.com/bigballon/images/raw/master/img/Snipaste_qb.jpg" /></p>
+<p>至此，你拥有了一个通用且较为舒适的 VS Code 开发环境，
+无论是对于本地还是远程服务器的开发，配置同步，还是语法检查/自动格式化与代码调试，甚至是文件上传下载终端操作等功能，它都是舒心的。
+那么接下来，全心投入到你的学习和研究与工作中去吧。</p>
+<p>Do not cry for what you have lost, cherish for what you have experienced.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../linux_tools/" class="btn btn-neutral" title="Linux Tools"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../linux_tools/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
