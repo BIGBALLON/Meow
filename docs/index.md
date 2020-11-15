@@ -1,5 +1,8 @@
 # BG's Notebook
 
-This project was powered by [MkDocs](https://www.mkdocs.org/), a fast, simple and downright gorgeous static site generator that's geared towards building project documentation.
+I'm [BIGBALLON](bigballon.github.io), this is my personal backlog space which to share some tech articles or trivial things of life.
 
 
+This is my cat ice cream:
+
+<img src="./img/iceice.jpeg" width = "512" alt="ice cream" />
